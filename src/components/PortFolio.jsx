@@ -7,6 +7,8 @@ import reactjs from "../../public/reactjs.png";
 import nodejs from "../../public/node.png";
 import JavaScript from "../../public/javascript.png";
 import SQL from "../../public/SQL.png";
+
+
 function PortFolio() {
   const cardItem = [
     {

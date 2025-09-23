@@ -9,11 +9,7 @@ function About() {
       <div>
         <h1 className="text-3xl font-bold mb-5">About</h1>
         <p>
-<<<<<<< HEAD
           Hi, I'm Rahul, a web developer with a strong focus on the MERN
-=======
-          Hi, I'm Rahul Kumar, a web developer with a strong focus on the MERN
->>>>>>> 61415d107d3e472519339fdee1642d648fce0118
           stack. My IT background drives my passion for designing innovative and
           visually captivating software solutions that make a lasting impact.
         </p>
