@@ -9,7 +9,7 @@ import JavaScript from "../../public/javascript.png";
 import SQL from "../../public/SQL.png";
 
 
-function PortFolio() {
+function Portfolio() {
   const cardItem = [
     {
       id: 1,
@@ -104,4 +104,4 @@ function PortFolio() {
   );
 }
 
-export default PortFolio;
+export default Portfolio;
