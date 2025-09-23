@@ -176,10 +176,26 @@
             <span class="tech-tag">Express</span>
           </div>
           <div class="project-links">
-            <a href="#" class="project-link">
+            <a href="#" class="project-link" onclick="openTwoLinks(event)">
               <i class="fas fa-external-link-alt"></i>
               Live Demo
             </a>
+
+            <script>
+              function openTwoLinks(event) {
+                event.preventDefault();
+
+                const backendURL = "https://zippy-cart-backend.onrender.com";
+                const frontendURL = "https://zippy-cart-frontend.onrender.com";
+
+                window.open(backendURL, "_blank");
+
+                setTimeout(() => {
+                  window.open(frontendURL, "_blank");
+                }, 3000);
+              }
+            </script>
+
             <a
               href="https://github.com/rahulkumar86920/Zippy_Cart"
               target="_blank"
@@ -207,7 +223,11 @@
             <span class="tech-tag">Express</span>
           </div>
           <div class="project-links">
-            <a href="#" class="project-link">
+            <a
+              href="https://zoomify-frontend-3pov.onrender.com/"
+              target="_blank"
+              class="project-link"
+            >
               <i class="fas fa-external-link-alt"></i>
               Live Demo
             </a>
