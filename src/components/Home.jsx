@@ -14,11 +14,8 @@ import { FaNode } from "react-icons/fa";
 import { ReactTyped, Typed } from "react-typed";
 import pic from "../../public/port-logo.jpg";
 
-<<<<<<< HEAD
-function Home() { 
-=======
 function Home() {
->>>>>>> 61415d107d3e472519339fdee1642d648fce0118
+
   return (
     <>
       <div
