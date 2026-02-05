@@ -1,302 +1,605 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rahul Kumar - Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Rahul Kumar - Software Development Engineer | Full Stack Developer specializing in MERN Stack, DSA, and scalable web applications"
+    />
+    <title>Rahul Kumar | Software Development Engineer</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="/profile_rahul.png" />
-
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="#" class="logo">&lt;Rahul Kumar/&gt;</a>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <!-- <li><a href="#about">About</a></li> -->
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+    <header class="header">
+      <nav class="nav">
+        <a href="#hero" class="nav__brand">
+          <span class="nav__brand-text">Rahul Kumar</span>
+          <span class="nav__brand-subtitle">Software Engineer</span>
+        </a>
+        <ul class="nav__menu">
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#experience" class="nav__link">Experience</a></li>
+          <li><a href="#projects" class="nav__link">Projects</a></li>
+          <li>
+            <a href="#contact" class="nav__link nav__link--cta">Contact</a>
+          </li>
         </ul>
+        <button class="nav__toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__text">
+            <p class="hero__greeting">Hi, I'm</p>
+            <h1 class="hero__title">Rahul Kumar</h1>
+            <h2 class="hero__subtitle">Software Development Engineer</h2>
+            <p class="hero__description">
+              Final-year B.Sc. IT student at D.G. Ruparel College, Mumbai.
+              Passionate about building scalable web applications with modern
+              technologies. Specializing in full-stack development with MERN
+              stack and strengthening problem-solving skills through Data
+              Structures & Algorithms in Java.
+            </p>
+            <div class="hero__cta">
+              <a href="#projects" class="btn btn--primary">
+                <span>View Projects</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn--secondary">
+                <span>Let's Connect</span>
+              </a>
+            </div>
+          </div>
+          <div class="hero__visual">
+            <div class="hero__card">
+              <div class="hero__card-header">
+                <div class="hero__card-dots">
+                  <span class="dot dot--red"></span>
+                  <span class="dot dot--yellow"></span>
+                  <span class="dot dot--green"></span>
+                </div>
+                <span class="hero__card-title">profile.js</span>
+              </div>
+              <div class="hero__card-body">
+                <pre class="code">
+<span class="code__line"><span class="code__keyword">const</span> <span class="code__variable">developer</span> = {</span>
+<span class="code__line">  <span class="code__property">name</span>: <span class="code__string">"Rahul Kumar"</span>,</span>
+<span class="code__line">  <span class="code__property">role</span>: <span class="code__string">"SDE Intern"</span>,</span>
+<span class="code__line">  <span class="code__property">company</span>: <span class="code__string">"Restaverse"</span>,</span>
+<span class="code__line">  <span class="code__property">skills</span>: [</span>
+<span class="code__line">    <span class="code__string">"React"</span>, <span class="code__string">"Node.js"</span>,</span>
+<span class="code__line">    <span class="code__string">"MongoDB"</span>, <span class="code__string">"Java"</span></span>
+<span class="code__line">  ],</span>
+<span class="code__line">  <span class="code__property">passion</span>: <span class="code__string">"Problem Solving"</span></span>
+<span class="code__line">};</span>
+              </pre>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
-
-    <!-- left side of the hone page -->
-    <section class="hero" id="home">
-      <div class="hero-container">
-        <div class="hero-content">
-          <h2>Aspiring Software Engineer || MERN Stack Developer</h2>
-          <p class="subtitle">
-            Building innovative, user-focused web solutions while mastering DSA
-            in Java
-          </p>
-          <p>
-            I’m Rahul Kumar, a passionate developer and final-year B.Sc. IT
-            student at D.G. Ruparel College, Mumbai. I’m strengthening my
-            problem-solving skills by learning Data Structures & Algorithms in
-            Java, aiming to become a software engineer. I specialize in building
-            innovative web applications using React, Node.js, and cloud
-            deployment.
-          </p>
-
-          <div class="cta-buttons">
-            <a href="#projects" class="btn-primary">
-              <i class="fas fa-rocket"></i>
-              View My Projects
-            </a>
-            <a href="#contact" class="btn-secondary">
-              <i class="fas fa-envelope"></i>
-              Get In Touch
-            </a>
-          </div>
-        </div>
-        <!-- right side of the hone page -->
-        <div class="hero-code">
-          <div class="code-header">
-            <div class="code-dot dot-red"></div>
-            <div class="code-dot dot-yellow"></div>
-            <div class="code-dot dot-green"></div>
-          </div>
-          <div class="code-content">
-            <div class="code-line">
-              <span class="line-number">1</span>
-              <span
-                ><span class="keyword">const</span>
-                <span class="function">developer</span> = {</span
-              >
-            </div>
-            <div class="code-line">
-              <span class="line-number">2</span>
-              <span
-                >&nbsp;&nbsp;name:
-                <span class="string">'Rahul Kumar'</span>,</span
-              >
-            </div>
-            <div class="code-line">
-              <span class="line-number">3</span>
-              <span
-                >&nbsp;&nbsp;skills: [<span class="string">'React'</span>,
-                <span class="string">'Node.js'</span>],</span
-              >
-            </div>
-            <div class="code-line">
-              <span class="line-number">4</span>
-              <span
-                >&nbsp;&nbsp;passion:
-                <span class="string">'Building amazing apps'</span></span
-              >
-            </div>
-            <div class="code-line">
-              <span class="line-number">5</span>
-              <span>};</span>
-            </div>
-          </div>
-        </div>
+      <div class="hero__scroll">
+        <span>Scroll Down</span>
+        <div class="hero__scroll-line"></div>
       </div>
     </section>
 
-    <!-- Tech Stack -->
-    <section class="tech-stack">
-      <div class="tech-container">
-        <h2 class="section-title">Tech Stack</h2>
+    <!-- About/Tech Stack Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__label">What I Work With</span>
+          <h2 class="section-header__title">Tech Stack</h2>
+        </div>
         <div class="tech-grid">
-          <div class="tech-item">
-            <i class="fab fa-react tech-icon" style="color: #61dafb"></i>
-            <div class="tech-name">React</div>
+          <!-- this is for the React -->
+          <div class="tech-card reveal">
+            <div class="tech-card__icon">
+              <i class="fab fa-react"></i>
+            </div>
+            <h3 class="tech-card__title">React</h3>
+            <p class="tech-card__description">
+              Building dynamic, responsive user interfaces
+            </p>
           </div>
-          <div class="tech-item">
-            <i class="fab fa-node-js tech-icon" style="color: #339933"></i>
-            <div class="tech-name">Node.js</div>
+          <!-- this is for the NODE JS -->
+          <div class="tech-card reveal">
+            <div class="tech-card__icon">
+              <i class="fab fa-node-js"></i>
+            </div>
+            <h3 class="tech-card__title">Node.js</h3>
+            <p class="tech-card__description">
+              Scalable backend services and APIs
+            </p>
           </div>
-          <div class="tech-item">
-            <i class="fab fa-js-square tech-icon" style="color: #f7df1e"></i>
-            <div class="tech-name">JavaScript</div>
+          <!-- this is for the Mongodb -->
+          <div class="tech-card reveal">
+            <div class="tech-card__icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3 class="tech-card__title">MongoDB</h3>
+            <p class="tech-card__description">
+              NoSQL database design and optimization
+            </p>
           </div>
-          <div class="tech-item">
-            <i class="fab fa-java tech-icon" style="color: #3776ab"></i>
-            <div class="tech-name">Java</div>
+          <!-- this is for the Java -->
+          <div class="tech-card reveal">
+            <div class="tech-card__icon">
+              <i class="fab fa-java"></i>
+            </div>
+            <h3 class="tech-card__title">Java</h3>
+            <p class="tech-card__description">
+              Data structures and algorithm mastery
+            </p>
           </div>
-          <div class="tech-item">
-            <i class="fas fa-database tech-icon" style="color: #4db33d"></i>
-            <div class="tech-name">MongoDB</div>
+          <!-- this is for the JS -->
+          <div class="tech-card reveal">
+            <div class="tech-card__icon">
+              <i class="fab fa-js-square"></i>
+            </div>
+            <h3 class="tech-card__title">JavaScript</h3>
+            <p class="tech-card__description">
+              Modern ES6+ and async programming
+            </p>
           </div>
-          <div class="tech-item">
-            <i class="fab fa-git-alt tech-icon" style="color: #f05032"></i>
-            <div class="tech-name">Git</div>
+          <!-- this is for the git  -->
+          <div class="tech-card reveal">
+            <div class="tech-card__icon">
+              <i class="fab fa-git-alt"></i>
+            </div>
+            <h3 class="tech-card__title">Git</h3>
+            <p class="tech-card__description">
+              Version control and collaboration
+            </p>
           </div>
-         
+          <!-- this is for the python -->
+          <div class="tech-card reveal">
+            <div class="tech-card__icon">
+              <i class="fab fa-python"></i>
+            </div>
+            <h3 class="tech-card__title">Python</h3>
+            <p class="tech-card__description">
+              Developing robust backend systems and APIs using Python
+            </p>
+          </div>
+          <!-- this is for the sql -->
+          <div class="tech-card reveal">
+            <div class="tech-card__icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3 class="tech-card__title">SQL</h3>
+            <p class="tech-card__description">
+              Designing and managing relational databases using SQL
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Preview -->
-    <section class="projects-preview" id="projects">
-      <div class="projects-container">
-        <h2 class="section-title">Featured Projects</h2>
-
-        <div class="project-card">
-          <h3 class="project-title">
-            🛒 ZippyCart - Real-Time Grocery Delivery
-          </h3>
-          <p class="project-description">
-            ZippyCart is a real-time grocery delivery platform built with the
-            MERN stack. It features user authentication, product catalog,
-            shopping cart, order placement, and order tracking for seamless
-            customer experience.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">MongoDB</span>
-            <span class="tech-tag">Express</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="project-link" onclick="openTwoLinks(event)">
-              <i class="fas fa-external-link-alt"></i>
-              Live Demo
-            </a>
-
-            <script>
-              function openTwoLinks(event) {
-                event.preventDefault();
-
-                const backendURL = "https://zippy-cart-backend.onrender.com";
-                const frontendURL = "https://zippy-cart-frontend.onrender.com";
-
-                window.open(backendURL, "_blank");
-
-                setTimeout(() => {
-                  window.open(frontendURL, "_blank");
-                }, 3000);
-              }
-            </script>
-
-            <a
-              href="https://github.com/rahulkumar86920/Zippy_Cart"
-              target="_blank"
-              class="project-link"
-            >
-              <i class="fab fa-github"></i>
-              Source Code
-            </a>
-          </div>
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__label">Professional Journey</span>
+          <h2 class="section-header__title">Experience</h2>
         </div>
-
-        <div class="project-card">
-          <h3 class="project-title">🎥 Zoomify - Real-Time Video & Chat App</h3>
-          <p class="project-description">
-            Zoomify is a full-stack real-time communication platform built with
-            React, Node.js, and Socket.IO. It features video calling, instant
-            messaging, and collaborative features for seamless online
-            interactions.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">Socket.IO</span>
-            <span class="tech-tag">WebRTC</span>
-            <span class="tech-tag">Express</span>
+        <div class="experience-timeline">
+          <div class="experience-item reveal">
+            <div class="experience-item__marker"></div>
+            <div class="experience-item__content">
+              <div class="experience-item__header">
+                <div>
+                  <h3 class="experience-item__title">
+                    Software Development Engineer Intern
+                  </h3>
+                  <p class="experience-item__company">
+                    <i class="fas fa-building"></i>
+                    Restaverse
+                  </p>
+                </div>
+                <span class="experience-item__date">2026-Jan - Present</span>
+              </div>
+              <ul class="experience-item__list">
+                <li>
+                  Developed and maintained full-stack features using React and
+                  Node.js, improving application performance by 25%
+                </li>
+                <li>
+                  Integrated third-party APIs and payment gateways to enhance
+                  platform functionality and user experience
+                </li>
+                <li>
+                  Optimized database queries and implemented caching strategies,
+                  reducing API response times by 40%
+                </li>
+                <li>
+                  Collaborated with cross-functional engineering teams in Agile
+                  sprints to deliver features on schedule
+                </li>
+                <li>
+                  Conducted code reviews and implemented best practices for
+                  clean, maintainable, and scalable code architecture
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="project-links">
-            <a
-              href="https://zoomify-frontend-3pov.onrender.com/"
-              target="_blank"
-              class="project-link"
-            >
-              <i class="fas fa-external-link-alt"></i>
-              Live Demo
-            </a>
-            <a
-              href="https://github.com/rahulkumar86920/Zoomify"
-              target="_blank"
-              class="project-link"
-            >
-              <i class="fab fa-github"></i>
-              Source Code
-            </a>
-          </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 3rem">
-          <a
-            href="https://github.com/rahulkumar86920?tab=repositories"
-            target="_blank"
-            class="btn-primary"
-          >
-            <i class="fas fa-folder-open"></i>
-            View All Projects
-          </a>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section class="contact" id="contact">
-      <div class="contact-container">
-        <h2 class="section-title">Let's Build Something Together</h2>
-        <p style="font-size: 1.1rem; color: #8b949e; margin-bottom: 2rem">
-          I'm always interested in new opportunities and cool projects. Let's
-          connect and discuss how we can work together!
-        </p>
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__label">Featured Work</span>
+          <h2 class="section-header__title">Projects</h2>
+        </div>
+        <div class="projects-grid">
+          <!-- Project 1: ZippyCart -->
+          <article class="project-card reveal">
+            <div class="project-card__image">
+              <img
+                src="/img/zippyCart.png"
+                alt="Zippycart Screenshot"
+                class="project-card__screenshot"
+              />
+              <div class="project-card__overlay">
+                <div class="project-card__links">
+                  <a
+                    href="#"
+                    onclick="openTwoLinks(event)"
+                    class="project-card__link"
+                    aria-label="View live demo"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a
+                    href="https://github.com/rahulkumar86920/Zippy_Cart"
+                    target="_blank"
+                    class="project-card__link"
+                    aria-label="View source code"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">Express</span>
+              </div>
+              <h3 class="project-card__title">
+                ZippyCart - Real-Time Grocery Delivery
+              </h3>
+              <p class="project-card__description">
+                Full-stack e-commerce platform enabling real-time grocery
+                ordering and delivery tracking. Features include user
+                authentication with JWT, dynamic product catalog with
+                search/filter, shopping cart management, secure checkout with
+                payment integration, and real-time order tracking. Built with
+                RESTful APIs, implemented responsive UI with React, and deployed
+                on cloud infrastructure for scalability and reliability.
+              </p>
+              <div class="project-card__footer">
+                <a
+                  href="#"
+                  onclick="openTwoLinks(event)"
+                  class="project-card__btn"
+                >
+                  View Project <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
 
-        <div class="cta-buttons">
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=rahulkumar86920@gmail.com&su=Job%20Opportunity&body=Hi%20Rahul,"
-            target="_blank"
-            class="btn-primary"
-          >
-            <i class="fas fa-envelope"></i>
-            Send Email
-          </a>
+          <!-- Project 2: Zoomify -->
+          <article class="project-card reveal">
+            <div class="project-card__image">
+              <img
+                src="/img/zoomify.png"
+                alt="ZippyCart Screenshot"
+                class="project-card__screenshot"
+              />
+              <div class="project-card__overlay">
+                <div class="project-card__links">
+                  <a
+                    href="https://zoomify-frontend-3pov.onrender.com/"
+                    target="_blank"
+                    class="project-card__link"
+                    aria-label="View live demo"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a
+                    href="https://github.com/rahulkumar86920/Zoomify"
+                    target="_blank"
+                    class="project-card__link"
+                    aria-label="View source code"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags">
+                <span class="tag">React</span>
+                <span class="tag">WebRTC</span>
+                <span class="tag">Socket.IO</span>
+                <span class="tag">Node.js</span>
+              </div>
+              <h3 class="project-card__title">
+                Zoomify - Real-Time Video Communication
+              </h3>
+              <p class="project-card__description">
+                Real-time video conferencing and messaging platform leveraging
+                WebRTC for peer-to-peer connections and Socket.IO for instant
+                messaging. Features include HD video/audio calling, screen
+                sharing, real-time chat with message persistence, room
+                management with unique IDs, and collaborative whiteboard.
+                Implemented STUN/TURN servers for NAT traversal and optimized
+                connection quality for low-latency communication.
+              </p>
+              <div class="project-card__footer">
+                <a
+                  href="https://zoomify-frontend-3pov.onrender.com/"
+                  target="_blank"
+                  class="project-card__btn"
+                >
+                  View Project <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
 
-          <a
-            href="https://drive.google.com/file/d/19o1DzWRUsqVl1kPnuGg2-kYvEIt27qYE/view?usp=sharing"
-            target="_blank"
-            class="btn-secondary"
-          >
-            <i class="fas fa-download"></i>
-            Download Resume
-          </a>
+          <!-- Project 3: DataHarvest - Web Scraping Engine -->
+          <article class="project-card reveal">
+            <div class="project-card__image">
+              <img
+                src="/img/datalens.png"
+                alt="datalens Screenshot"
+                class="project-card__screenshot"
+              />
+              <div class="project-card__overlay">
+                <div class="project-card__links">
+                  <a
+                    href="https://data-lens-tau.vercel.app/"
+                    target="_blank"
+                    class="project-card__link"
+                    aria-label="View live demo"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a
+                    href="https://github.com/rahulkumar86920/DataLens"
+                    target="_blank"
+                    class="project-card__link"
+                    aria-label="View source code"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags">
+                <span class="tag">Python</span>
+                <span class="tag">BeautifulSoup</span>
+                <span class="tag">Selenium</span>
+                <span class="tag">MongoDB</span>
+              </div>
+              <h3 class="project-card__title">
+                Data Lens – Automated Data Extraction & Monitoring System
+              </h3>
+              <p class="project-card__description">
+                Data Lens is an automated data extraction and monitoring system
+                that aggregates structured data from multiple websites using
+                Python. It supports static scraping with BeautifulSoup and
+                dynamic JavaScript-rendered pages via Selenium, with built-in
+                rate limiting, retry-based error handling, and data
+                validation/cleaning. The system features scheduled scraping,
+                duplicate detection, scalable MongoDB storage, and CSV/JSON
+                exports, enabling reliable market research, price monitoring,
+                and competitive analysis with 99.5% data accuracy.
+              </p>
+              <div class="project-card__footer">
+                <a
+                  href="https://data-lens-tau.vercel.app/"
+                  target="_blank"
+                  class="project-card__btn"
+                >
+                  View Project <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Sweet Shop Management System -->
+          <article class="project-card reveal">
+            <div class="project-card__image">
+              <img
+                src="/img/sweetshop.png"
+                alt="ZippyCart Screenshot"
+                class="project-card__screenshot"
+              />
+              <div class="project-card__overlay">
+                <div class="project-card__links">
+                  <a
+                    href="https://github.com/rahulkumar86920/sweet_shop_management/tree/main"
+                    target="_blank"
+                    class="project-card__link"
+                    aria-label="View source code"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags">
+                <span class="tag">React</span>
+                <span class="tag">Node js</span>
+                <span class="tag">Express js</span>
+                <span class="tag">MongoDb</span>
+              </div>
+              <h3 class="project-card__title">Sweet Shop Management System</h3>
+              <p class="project-card__description">
+                Enterprise-grade inventory and order management system designed
+                for retail sweet shops. Streamlines operations with real-time
+                inventory tracking, automated billing, customer order
+                management, and sales analytics. Features role-based access
+                control (admin/staff), CRUD operations for products, invoice
+                generation with GST calculation, and comprehensive sales
+                reports. Reduces manual errors by 60% and improves order
+                processing speed, enabling business owners to make data-driven
+                decisions.
+              </p>
+              <div class="project-card__footer">
+                <a
+                  href="https://github.com/rahulkumar86920"
+                  target="_blank"
+                  class="project-card__btn"
+                >
+                  View Project <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
 
-        <div class="social-links">
+        <div class="projects-cta reveal">
+          <p>Interested in seeing more of my work?</p>
           <a
             href="https://github.com/rahulkumar86920?tab=repositories"
             target="_blank"
-            class="social-link"
+            class="btn btn--primary"
           >
+            <span>View All Projects on GitHub</span>
             <i class="fab fa-github"></i>
           </a>
-          <a
-            href="https://www.linkedin.com/in/rahhulkumar/"
-            target="_blank"
-            class="social-link"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
-
-          <a
-            href="https://www.instagram.com/mr_rahhul/?next=%2F"
-            target="_blank"
-            class="social-link"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a
-            href="https://x.com/rahulkumar86920"
-            target="_blank"
-            class="social-link"
-          >
-            <i class="fab fa-twitter"></i>
-          </a>
         </div>
       </div>
     </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-content">
+          <div class="contact-text reveal">
+            <span class="section-header__label">Get In Touch</span>
+            <h2 class="contact-title">
+              Let's Build Something Amazing Together
+            </h2>
+            <p class="contact-description">
+              I'm currently seeking full-time Software Engineering
+              opportunities. Whether you have a project in mind, want to discuss
+              tech, or just want to connect, I'd love to hear from you.
+            </p>
+            <div class="contact-info">
+              <a
+                href="mailto:rahulkumar86920@gmail.com"
+                class="contact-info__item"
+              >
+                <i class="fas fa-envelope"></i>
+                <span>rahulkumar86920@gmail.com</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/rahhulkumar/"
+                target="_blank"
+                class="contact-info__item"
+              >
+                <i class="fab fa-linkedin"></i>
+                <span>linkedin.com/in/rahhulkumar</span>
+              </a>
+              <a
+                href="https://github.com/rahulkumar86920"
+                target="_blank"
+                class="contact-info__item"
+              >
+                <i class="fab fa-github"></i>
+                <span>github.com/rahulkumar86920</span>
+              </a>
+            </div>
+          </div>
+          <div class="contact-actions reveal">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=rahulkumar86920@gmail.com&su=Job%20Opportunity&body=Hi%20Rahul,"
+              target="_blank"
+              class="btn btn--primary btn--large"
+            >
+              <i class="fas fa-paper-plane"></i>
+              <span>Send Email</span>
+            </a>
+            <a
+              href="https://drive.google.com/file/d/19o1DzWRUsqVl1kPnuGg2-kYvEIt27qYE/view?usp=sharing"
+              target="_blank"
+              class="btn btn--secondary btn--large"
+            >
+              <i class="fas fa-download"></i>
+              <span>Download Resume</span>
+            </a>
+            <div class="social-links">
+              <a
+                href="https://github.com/rahulkumar86920"
+                target="_blank"
+                class="social-link"
+                aria-label="GitHub"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/rahhulkumar/"
+                target="_blank"
+                class="social-link"
+                aria-label="LinkedIn"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://twitter.com/rahulkumar86920"
+                target="_blank"
+                class="social-link"
+                aria-label="Twitter"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/mr_rahhul/"
+                target="_blank"
+                class="social-link"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 Rahul Kumar. Designed & Built with passion.</p>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>
