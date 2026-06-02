@@ -3,601 +3,665 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Rahul Kumar - Software Development Engineer | Full Stack Developer specializing in MERN Stack, DSA, and scalable web applications"
-    />
-    <title>Rahul Kumar | Software Development Engineer</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <meta name="description" content="Rahul Kumar — B.Sc. IT Graduate & Software Developer. MERN Stack, React Native, FastAPI. 5 months SDE Intern @ Restaverse. Open to opportunities." />
+    <title>Rahul Kumar · Software Developer</title>
     <link rel="icon" type="image/png" href="/profile_rahul.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Navigation -->
-    <header class="header">
+
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+      <div class="preloader-inner">
+        <div class="term-window">
+          <div class="term-bar">
+            <span class="term-dot r"></span>
+            <span class="term-dot y"></span>
+            <span class="term-dot g"></span>
+            <span class="term-title">portfolio.exe</span>
+          </div>
+          <div class="term-body" id="termBody"></div>
+          <div class="term-cursor" id="termCursor">_</div>
+        </div>
+        <div class="preloader-progress-wrap">
+          <div class="preloader-progress" id="preloaderProgress"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCROLL PROGRESS -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-trail" id="cursorTrail"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- NOISE -->
+    <div class="noise" aria-hidden="true"></div>
+
+    <!-- SCANLINES -->
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <!-- ─── NAV ─── -->
+    <header class="nav-wrap" id="navbar">
       <nav class="nav">
-        <a href="#hero" class="nav__brand">
-          <span class="nav__brand-text">Rahul Kumar</span>
-          <span class="nav__brand-subtitle">Software Engineer</span>
+        <a href="#home" class="nav-logo" id="nav-logo">
+          <span class="logo-bracket">[</span>
+          RK
+          <span class="logo-bracket">]</span>
+          <span class="logo-cursor">▊</span>
         </a>
-        <ul class="nav__menu">
-          <li><a href="#about" class="nav__link">About</a></li>
-          <li><a href="#experience" class="nav__link">Experience</a></li>
-          <li><a href="#projects" class="nav__link">Projects</a></li>
-          <li>
-            <a href="#contact" class="nav__link nav__link--cta">Contact</a>
-          </li>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about"      class="nav-link" data-section="about">      <span class="nav-num">01.</span> Stack</a></li>
+          <li><a href="#experience" class="nav-link" data-section="experience"> <span class="nav-num">02.</span> Work</a></li>
+          <li><a href="#projects"   class="nav-link" data-section="projects">   <span class="nav-num">03.</span> Projects</a></li>
+          <li><a href="#contact"    class="nav-link" data-section="contact">    <span class="nav-num">04.</span> Contact</a></li>
         </ul>
-        <button class="nav__toggle" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
+
+        <a href="https://drive.google.com/file/d/1LtXh19VvJwXxunKSMnKEOLt8MPR6zUTJ/view?usp=drive_link"
+           target="_blank" class="nav-resume mag-btn" id="nav-resume-btn">
+          <span class="mag-btn-text">Resume<i class="fas fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
         </button>
       </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="container">
-        <div class="hero__content">
-          <div class="hero__text">
-            <p class="hero__greeting">Hi, I'm</p>
-            <h1 class="hero__title">Rahul Kumar</h1>
-            <h2 class="hero__subtitle">Software Development Engineer</h2>
-            <p class="hero__description">
-              Final-year B.Sc. IT student at D.G. Ruparel College, Mumbai.
-              Passionate about building scalable web applications with modern
-              technologies. Specializing in full-stack development with MERN
-              stack and strengthening problem-solving skills through Data
-              Structures & Algorithms in Java.
-            </p>
-            <div class="hero__cta">
-              <a href="#projects" class="btn btn--primary">
-                <span>View Projects</span>
-                <i class="fas fa-arrow-right"></i>
-              </a>
-              <a href="#contact" class="btn btn--secondary">
-                <span>Let's Connect</span>
-              </a>
-            </div>
-          </div>
-          <div class="hero__visual">
-            <div class="hero__card">
-              <div class="hero__card-header">
-                <div class="hero__card-dots">
-                  <span class="dot dot--red"></span>
-                  <span class="dot dot--yellow"></span>
-                  <span class="dot dot--green"></span>
-                </div>
-                <span class="hero__card-title">profile.js</span>
-              </div>
-              <div class="hero__card-body">
-                <pre class="code">
-<span class="code__line"><span class="code__keyword">const</span> <span class="code__variable">developer</span> = {</span>
-<span class="code__line">  <span class="code__property">name</span>: <span class="code__string">"Rahul Kumar"</span>,</span>
-<span class="code__line">  <span class="code__property">role</span>: <span class="code__string">"SDE Intern"</span>,</span>
-<span class="code__line">  <span class="code__property">company</span>: <span class="code__string">"Restaverse"</span>,</span>
-<span class="code__line">  <span class="code__property">skills</span>: [</span>
-<span class="code__line">    <span class="code__string">"React"</span>, <span class="code__string">"Node.js"</span>,</span>
-<span class="code__line">    <span class="code__string">"MongoDB"</span>, <span class="code__string">"Java"</span></span>
-<span class="code__line">  ],</span>
-<span class="code__line">  <span class="code__property">passion</span>: <span class="code__string">"Problem Solving"</span></span>
-<span class="code__line">};</span>
-              </pre>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="hero__scroll">
-        <span>Scroll Down</span>
-        <div class="hero__scroll-line"></div>
-      </div>
-    </section>
+    <main id="main-content">
 
-    <!-- About/Tech Stack Section -->
-    <section class="about" id="about">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-header__label">What I Work With</span>
-          <h2 class="section-header__title">Tech Stack</h2>
-        </div>
-        <div class="tech-grid">
-          <!-- this is for the React -->
-          <div class="tech-card reveal">
-            <div class="tech-card__icon">
-              <i class="fab fa-react"></i>
-            </div>
-            <h3 class="tech-card__title">React</h3>
-            <p class="tech-card__description">
-              Building dynamic, responsive user interfaces
-            </p>
-          </div>
-          <!-- this is for the NODE JS -->
-          <div class="tech-card reveal">
-            <div class="tech-card__icon">
-              <i class="fab fa-node-js"></i>
-            </div>
-            <h3 class="tech-card__title">Node.js</h3>
-            <p class="tech-card__description">
-              Scalable backend services and APIs
-            </p>
-          </div>
-          <!-- this is for the Mongodb -->
-          <div class="tech-card reveal">
-            <div class="tech-card__icon">
-              <i class="fas fa-database"></i>
-            </div>
-            <h3 class="tech-card__title">MongoDB</h3>
-            <p class="tech-card__description">
-              NoSQL database design and optimization
-            </p>
-          </div>
-          <!-- this is for the Java -->
-          <div class="tech-card reveal">
-            <div class="tech-card__icon">
-              <i class="fab fa-java"></i>
-            </div>
-            <h3 class="tech-card__title">Java</h3>
-            <p class="tech-card__description">
-              Data structures and algorithm mastery
-            </p>
-          </div>
-          <!-- this is for the JS -->
-          <div class="tech-card reveal">
-            <div class="tech-card__icon">
-              <i class="fab fa-js-square"></i>
-            </div>
-            <h3 class="tech-card__title">JavaScript</h3>
-            <p class="tech-card__description">
-              Modern ES6+ and async programming
-            </p>
-          </div>
-          <!-- this is for the git  -->
-          <div class="tech-card reveal">
-            <div class="tech-card__icon">
-              <i class="fab fa-git-alt"></i>
-            </div>
-            <h3 class="tech-card__title">Git</h3>
-            <p class="tech-card__description">
-              Version control and collaboration
-            </p>
-          </div>
-          <!-- this is for the python -->
-          <div class="tech-card reveal">
-            <div class="tech-card__icon">
-              <i class="fab fa-python"></i>
-            </div>
-            <h3 class="tech-card__title">Python</h3>
-            <p class="tech-card__description">
-              Developing robust backend systems and APIs using Python
-            </p>
-          </div>
-          <!-- this is for the sql -->
-          <div class="tech-card reveal">
-            <div class="tech-card__icon">
-              <i class="fas fa-database"></i>
-            </div>
-            <h3 class="tech-card__title">SQL</h3>
-            <p class="tech-card__description">
-              Designing and managing relational databases using SQL
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+      <!-- ═══════════════════════════════════
+           HERO
+      ═══════════════════════════════════ -->
+      <section class="hero" id="home">
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
 
-    <!-- Experience Section -->
-    <section class="experience" id="experience">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-header__label">Professional Journey</span>
-          <h2 class="section-header__title">Experience</h2>
-        </div>
-        <div class="experience-timeline">
-          <div class="experience-item reveal">
-            <div class="experience-item__marker"></div>
-            <div class="experience-item__content">
-              <div class="experience-item__header">
-                <div>
-                  <h3 class="experience-item__title">
-                    Software Development Engineer Intern
-                  </h3>
-                  <p class="experience-item__company">
-                    <i class="fas fa-building"></i>
-                    Restaverse
-                  </p>
-                </div>
-                <span class="experience-item__date">2026-Jan - Present</span>
-              </div>
-              <ul class="experience-item__list">
-                <li>
-                  Developed and maintained full-stack features using React and
-                  Node.js, improving application performance by 25%
-                </li>
-                <li>
-                  Integrated third-party APIs and payment gateways to enhance
-                  platform functionality and user experience
-                </li>
-                <li>
-                  Optimized database queries and implemented caching strategies,
-                  reducing API response times by 40%
-                </li>
-                <li>
-                  Collaborated with cross-functional engineering teams in Agile
-                  sprints to deliver features on schedule
-                </li>
-                <li>
-                  Conducted code reviews and implemented best practices for
-                  clean, maintainable, and scalable code architecture
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-header__label">Featured Work</span>
-          <h2 class="section-header__title">Projects</h2>
-        </div>
-        <div class="projects-grid">
-          <!-- Project 1: ZippyCart -->
-          <article class="project-card reveal">
-            <div class="project-card__image">
-              <img
-                src="/img/zippyCart.png"
-                alt="Zippycart Screenshot"
-                class="project-card__screenshot"
-              />
-              <div class="project-card__overlay">
-                <div class="project-card__links">
-                  <a
-                    href="#"
-                    onclick="openTwoLinks(event)"
-                    class="project-card__link"
-                    aria-label="View live demo"
-                  >
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
-                  <a
-                    href="https://github.com/rahulkumar86920/Zippy_Cart"
-                    target="_blank"
-                    class="project-card__link"
-                    aria-label="View source code"
-                  >
-                    <i class="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="project-card__content">
-              <div class="project-card__tags">
-                <span class="tag">React</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">MongoDB</span>
-                <span class="tag">Express</span>
-              </div>
-              <h3 class="project-card__title">
-                ZippyCart - Real-Time Grocery Delivery
-              </h3>
-              <p class="project-card__description">
-                Full-stack e-commerce platform enabling real-time grocery
-                ordering and delivery tracking. Features include user
-                authentication with JWT, dynamic product catalog with
-                search/filter, shopping cart management, secure checkout with
-                payment integration, and real-time order tracking. Built with
-                RESTful APIs, implemented responsive UI with React, and deployed
-                on cloud infrastructure for scalability and reliability.
-              </p>
-              <div class="project-card__footer">
-                <a
-                  href="#"
-                  onclick="openTwoLinks(event)"
-                  class="project-card__btn"
-                >
-                  View Project <i class="fas fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 2: Zoomify -->
-          <article class="project-card reveal">
-            <div class="project-card__image">
-              <img
-                src="/img/zoomify.png"
-                alt="ZippyCart Screenshot"
-                class="project-card__screenshot"
-              />
-              <div class="project-card__overlay">
-                <div class="project-card__links">
-                  <a
-                    href="https://zoomify-frontend-3pov.onrender.com/"
-                    target="_blank"
-                    class="project-card__link"
-                    aria-label="View live demo"
-                  >
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
-                  <a
-                    href="https://github.com/rahulkumar86920/Zoomify"
-                    target="_blank"
-                    class="project-card__link"
-                    aria-label="View source code"
-                  >
-                    <i class="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="project-card__content">
-              <div class="project-card__tags">
-                <span class="tag">React</span>
-                <span class="tag">WebRTC</span>
-                <span class="tag">Socket.IO</span>
-                <span class="tag">Node.js</span>
-              </div>
-              <h3 class="project-card__title">
-                Zoomify - Real-Time Video Communication
-              </h3>
-              <p class="project-card__description">
-                Real-time video conferencing and messaging platform leveraging
-                WebRTC for peer-to-peer connections and Socket.IO for instant
-                messaging. Features include HD video/audio calling, screen
-                sharing, real-time chat with message persistence, room
-                management with unique IDs, and collaborative whiteboard.
-                Implemented STUN/TURN servers for NAT traversal and optimized
-                connection quality for low-latency communication.
-              </p>
-              <div class="project-card__footer">
-                <a
-                  href="https://zoomify-frontend-3pov.onrender.com/"
-                  target="_blank"
-                  class="project-card__btn"
-                >
-                  View Project <i class="fas fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 3: DataHarvest - Web Scraping Engine -->
-          <article class="project-card reveal">
-            <div class="project-card__image">
-              <img
-                src="/img/datalens.png"
-                alt="datalens Screenshot"
-                class="project-card__screenshot"
-              />
-              <div class="project-card__overlay">
-                <div class="project-card__links">
-                  <a
-                    href="https://data-lens-tau.vercel.app/"
-                    target="_blank"
-                    class="project-card__link"
-                    aria-label="View live demo"
-                  >
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
-                  <a
-                    href="https://github.com/rahulkumar86920/DataLens"
-                    target="_blank"
-                    class="project-card__link"
-                    aria-label="View source code"
-                  >
-                    <i class="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="project-card__content">
-              <div class="project-card__tags">
-                <span class="tag">Python</span>
-                <span class="tag">BeautifulSoup</span>
-                <span class="tag">Selenium</span>
-                <span class="tag">MongoDB</span>
-              </div>
-              <h3 class="project-card__title">
-                Data Lens – Automated Data Extraction & Monitoring System
-              </h3>
-              <p class="project-card__description">
-                Data Lens is an automated data extraction and monitoring system
-                that aggregates structured data from multiple websites using
-                Python. It supports static scraping with BeautifulSoup and
-                dynamic JavaScript-rendered pages via Selenium, with built-in
-                rate limiting, retry-based error handling, and data
-                validation/cleaning. The system features scheduled scraping,
-                duplicate detection, scalable MongoDB storage, and CSV/JSON
-                exports, enabling reliable market research, price monitoring,
-                and competitive analysis with 99.5% data accuracy.
-              </p>
-              <div class="project-card__footer">
-                <a
-                  href="https://data-lens-tau.vercel.app/"
-                  target="_blank"
-                  class="project-card__btn"
-                >
-                  View Project <i class="fas fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 4: Sweet Shop Management System -->
-          <article class="project-card reveal">
-            <div class="project-card__image">
-              <img
-                src="/img/sweetshop.png"
-                alt="ZippyCart Screenshot"
-                class="project-card__screenshot"
-              />
-              <div class="project-card__overlay">
-                <div class="project-card__links">
-                  <a
-                    href="https://github.com/rahulkumar86920/sweet_shop_management/tree/main"
-                    target="_blank"
-                    class="project-card__link"
-                    aria-label="View source code"
-                  >
-                    <i class="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="project-card__content">
-              <div class="project-card__tags">
-                <span class="tag">React</span>
-                <span class="tag">Node js</span>
-                <span class="tag">Express js</span>
-                <span class="tag">MongoDb</span>
-              </div>
-              <h3 class="project-card__title">Sweet Shop Management System</h3>
-              <p class="project-card__description">
-                Enterprise-grade inventory and order management system designed
-                for retail sweet shops. Streamlines operations with real-time
-                inventory tracking, automated billing, customer order
-                management, and sales analytics. Features role-based access
-                control (admin/staff), CRUD operations for products, invoice
-                generation with GST calculation, and comprehensive sales
-                reports. Reduces manual errors by 60% and improves order
-                processing speed, enabling business owners to make data-driven
-                decisions.
-              </p>
-              <div class="project-card__footer">
-                <a
-                  href="https://github.com/rahulkumar86920"
-                  target="_blank"
-                  class="project-card__btn"
-                >
-                  View Project <i class="fas fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </article>
+        <!-- Floating code snippets -->
+        <div class="float-code float-code--1 reveal-up">
+          <pre><code><span class="c-kw">const</span> <span class="c-var">dev</span> = {
+  <span class="c-prop">stack</span>: [<span class="c-str">"MERN"</span>, <span class="c-str">"RN"</span>, <span class="c-str">"FastAPI"</span>],
+  <span class="c-prop">degree</span>: <span class="c-str">"B.Sc. IT '26"</span>,
+  <span class="c-prop">open</span>: <span class="c-bool">true</span>,
+};</code></pre>
         </div>
 
-        <div class="projects-cta reveal">
-          <p>Interested in seeing more of my work?</p>
-          <a
-            href="https://github.com/rahulkumar86920?tab=repositories"
-            target="_blank"
-            class="btn btn--primary"
-          >
-            <span>View All Projects on GitHub</span>
-            <i class="fab fa-github"></i>
-          </a>
+        <div class="float-code float-code--2 reveal-up">
+          <pre><code><span class="c-fn">npm</span> run build
+<span class="c-ok">✓</span> Compiled in 284ms
+<span class="c-ok">✓</span> No errors found</code></pre>
         </div>
-      </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-      <div class="container">
-        <div class="contact-content">
-          <div class="contact-text reveal">
-            <span class="section-header__label">Get In Touch</span>
-            <h2 class="contact-title">
-              Let's Build Something Amazing Together
-            </h2>
-            <p class="contact-description">
-              I'm currently seeking full-time Software Engineering
-              opportunities. Whether you have a project in mind, want to discuss
-              tech, or just want to connect, I'd love to hear from you.
-            </p>
-            <div class="contact-info">
-              <a
-                href="mailto:rahulkumar86920@gmail.com"
-                class="contact-info__item"
-              >
-                <i class="fas fa-envelope"></i>
-                <span>rahulkumar86920@gmail.com</span>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/rahhulkumar/"
-                target="_blank"
-                class="contact-info__item"
-              >
-                <i class="fab fa-linkedin"></i>
-                <span>linkedin.com/in/rahhulkumar</span>
-              </a>
-              <a
-                href="https://github.com/rahulkumar86920"
-                target="_blank"
-                class="contact-info__item"
-              >
-                <i class="fab fa-github"></i>
-                <span>github.com/rahulkumar86920</span>
-              </a>
-            </div>
+        <div class="float-code float-code--3 reveal-up">
+          <pre><code><span class="c-comment">// git log</span>
+<span class="c-hash">a3f9d2e</span> feat: ship it 🚀
+<span class="c-hash">b72c1a0</span> fix: edge case</code></pre>
+        </div>
+
+        <div class="hero-inner container">
+          <div class="hero-status reveal-up">
+            <span class="status-dot"></span>
+            <span class="status-text">Available for full-time roles</span>
+            <span class="status-sep">//</span>
+            <span class="status-loc"><i class="fas fa-location-dot"></i> Mumbai, IN</span>
           </div>
-          <div class="contact-actions reveal">
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=rahulkumar86920@gmail.com&su=Job%20Opportunity&body=Hi%20Rahul,"
-              target="_blank"
-              class="btn btn--primary btn--large"
-            >
-              <i class="fas fa-paper-plane"></i>
-              <span>Send Email</span>
+
+          <h1 class="hero-name reveal-up delay-1">
+            <span class="glitch" data-text="Rahul">Rahul</span>
+            <br />
+            <em class="glitch-em" data-text="Kumar">Kumar</em>
+          </h1>
+
+          <div class="hero-role reveal-up delay-2">
+            <span class="role-prefix">$&nbsp;</span>
+            <span class="typed-text" id="typedText"></span>
+            <span class="cursor-blink">█</span>
+          </div>
+
+          <p class="hero-bio reveal-up delay-3">
+            B.Sc. IT grad from D.G. Ruparel College, Mumbai. 5 months as SDE Intern at Restaverse
+            working on React.js, React Native &amp; FastAPI. I pick up whatever the problem needs and ship it.
+          </p>
+
+          <div class="hero-actions reveal-up delay-4">
+            <a href="#projects" class="mag-btn btn-primary" id="hero-projects-btn">
+              <span class="mag-btn-text">View projects<i class="fas fa-terminal"></i></span>
             </a>
-            <a
-              href="https://drive.google.com/file/d/19o1DzWRUsqVl1kPnuGg2-kYvEIt27qYE/view?usp=sharing"
-              target="_blank"
-              class="btn btn--secondary btn--large"
-            >
-              <i class="fas fa-download"></i>
-              <span>Download Resume</span>
+            <a href="#contact" class="mag-btn btn-ghost" id="hero-contact-btn">
+              <span class="mag-btn-text">Say hello <i class="fas fa-arrow-right"></i></span>
             </a>
-            <div class="social-links">
-              <a
-                href="https://github.com/rahulkumar86920"
-                target="_blank"
-                class="social-link"
-                aria-label="GitHub"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/rahhulkumar/"
-                target="_blank"
-                class="social-link"
-                aria-label="LinkedIn"
-              >
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a
-                href="https://twitter.com/rahulkumar86920"
-                target="_blank"
-                class="social-link"
-                aria-label="Twitter"
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/mr_rahhul/"
-                target="_blank"
-                class="social-link"
-                aria-label="Instagram"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
+          </div>
+
+          <div class="hero-socials reveal-up delay-5">
+            <a href="https://github.com/rahulkumar86920" target="_blank" class="s-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rahhulkumar/" target="_blank" class="s-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com/rahulkumar86920" target="_blank" class="s-link" aria-label="Twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <div class="s-divider"></div>
+            <span class="s-hint">find me online</span>
+          </div>
+        </div>
+
+        <div class="hero-scroll-cue">
+          <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════
+           STACK / ABOUT
+      ═══════════════════════════════════ -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-eyebrow reveal-up">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-label">// tech_stack.json</span>
+          </div>
+          <h2 class="section-title reveal-up delay-1">What I build with</h2>
+          <p class="section-sub reveal-up delay-2">
+            Tools I reach for on a daily basis — each picked because it actually solves the problem.
+          </p>
+
+          <div class="skills-grid">
+
+            <div class="skill-card reveal-up delay-1" data-tilt>
+              <div class="skill-card-glow"></div>
+              <div class="skill-top">
+                <div class="skill-icon"><i class="fab fa-react"></i></div>
+                <div class="skill-level">90%</div>
+              </div>
+              <h3 class="skill-name">React</h3>
+              <p class="skill-desc">Hooks, context, suspense & component architecture</p>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+
+            <div class="skill-card reveal-up delay-2" data-tilt>
+              <div class="skill-card-glow"></div>
+              <div class="skill-top">
+                <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                <div class="skill-level">85%</div>
+              </div>
+              <h3 class="skill-name">Node.js</h3>
+              <p class="skill-desc">REST APIs, middleware, auth, and event-driven services</p>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+
+            <div class="skill-card reveal-up delay-3" data-tilt>
+              <div class="skill-card-glow"></div>
+              <div class="skill-top">
+                <div class="skill-icon"><i class="fas fa-leaf"></i></div>
+                <div class="skill-level">82%</div>
+              </div>
+              <h3 class="skill-name">MongoDB</h3>
+              <p class="skill-desc">Schema design, aggregation pipelines, indexing</p>
+              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            </div>
+
+            <div class="skill-card reveal-up delay-1" data-tilt>
+              <div class="skill-card-glow"></div>
+              <div class="skill-top">
+                <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+                <div class="skill-level">88%</div>
+              </div>
+              <h3 class="skill-name">JavaScript</h3>
+              <p class="skill-desc">ES2024+, async/await, closures, prototypes</p>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+
+            <div class="skill-card reveal-up delay-2" data-tilt>
+              <div class="skill-card-glow"></div>
+              <div class="skill-top">
+                <div class="skill-icon"><i class="fab fa-java"></i></div>
+                <div class="skill-level">78%</div>
+              </div>
+              <h3 class="skill-name">Java</h3>
+              <p class="skill-desc">DSA, OOP, design patterns, competitive coding</p>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+
+            <div class="skill-card reveal-up delay-3" data-tilt>
+              <div class="skill-card-glow"></div>
+              <div class="skill-top">
+                <div class="skill-icon"><i class="fab fa-python"></i></div>
+                <div class="skill-level">75%</div>
+              </div>
+              <h3 class="skill-name">Python</h3>
+              <p class="skill-desc">Scripting, automation, BeautifulSoup, Selenium</p>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+
+            <div class="skill-card reveal-up delay-1" data-tilt>
+              <div class="skill-card-glow"></div>
+              <div class="skill-top">
+                <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                <div class="skill-level">86%</div>
+              </div>
+              <h3 class="skill-name">Git</h3>
+              <p class="skill-desc">Branching, rebasing, PRs, CI workflows</p>
+              <div class="skill-bar"><div class="skill-fill" data-width="86"></div></div>
+            </div>
+
+            <div class="skill-card reveal-up delay-2" data-tilt>
+              <div class="skill-card-glow"></div>
+              <div class="skill-top">
+                <div class="skill-icon"><i class="fas fa-mobile-screen-button"></i></div>
+                <div class="skill-level">80%</div>
+              </div>
+              <h3 class="skill-name">React Native</h3>
+              <p class="skill-desc">Cross-platform mobile apps with native performance</p>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+
+            <div class="skill-card reveal-up delay-3" data-tilt>
+              <div class="skill-card-glow"></div>
+              <div class="skill-top">
+                <div class="skill-icon"><i class="fas fa-bolt"></i></div>
+                <div class="skill-level">76%</div>
+              </div>
+              <h3 class="skill-name">FastAPI</h3>
+              <p class="skill-desc">High-performance Python APIs with async support</p>
+              <div class="skill-bar"><div class="skill-fill" data-width="76"></div></div>
+            </div>
+
+          </div>
+
+          <!-- Stats strip -->
+          <div class="stats-strip reveal-up">
+            <div class="stat-item">
+              <span class="stat-num" data-count="4">0</span>
+              <span class="stat-label">Projects shipped</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+              <span class="stat-num" data-count="10">0</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+              <span class="stat-num" data-count="5">0</span>
+              <span class="stat-label">Months @ Restaverse</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+              <span class="stat-num" data-count="40">0</span>
+              <span class="stat-label">% faster APIs (optimized)</span>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- ═══════════════════════════════════
+           EXPERIENCE
+      ═══════════════════════════════════ -->
+      <section class="section section-dark" id="experience">
+        <div class="container">
+          <div class="section-eyebrow reveal-up">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-label">// git log --work</span>
+          </div>
+          <h2 class="section-title reveal-up delay-1">Where I've worked</h2>
+
+          <div class="exp-grid">
+            <div class="exp-card reveal-up delay-2" data-tilt>
+              <div class="exp-card-glow"></div>
+
+              <!-- commit-style header -->
+              <div class="exp-commit-bar">
+                <span class="commit-hash">#a3f9d2e</span>
+                <span class="commit-branch"><i class="fas fa-code-branch"></i> main</span>
+                <span class="commit-badge" style="color:#00e5ff;background:rgba(0,229,255,0.08);border-color:rgba(0,229,255,0.2)">COMPLETED</span>
+              </div>
+
+              <div class="exp-body">
+                <div class="exp-logo-wrap">
+                  <div class="exp-logo"><i class="fas fa-utensils"></i></div>
+                  <div>
+                    <h3 class="exp-role">Software Development Engineer Intern</h3>
+                    <p class="exp-company">@ Restaverse</p>
+                  </div>
+                </div>
+
+                <div class="exp-date-wrap">
+                  <i class="far fa-calendar-days"></i>
+                  <span>January 2026 – May 2026 &nbsp;·&nbsp; 5 months</span>
+                </div>
+
+                <ul class="exp-bullets">
+                  <li><span class="bullet-arrow">▸</span> Developed real-world application features using <strong>React.js</strong>, <strong>React Native</strong>, and <strong>FastAPI</strong></li>
+                  <li><span class="bullet-arrow">▸</span> Built full-stack features with React + Node.js — improved app performance by <strong>25%</strong></li>
+                  <li><span class="bullet-arrow">▸</span> Integrated third-party APIs and payment gateways end-to-end</li>
+                  <li><span class="bullet-arrow">▸</span> Optimized DB queries and added caching — API response times dropped by <strong>40%</strong></li>
+                  <li><span class="bullet-arrow">▸</span> Shipped features across Agile sprints with cross-functional teams</li>
+                  <li><span class="bullet-arrow">▸</span> Reviewed code, enforced clean architecture and modern development workflows</li>
+                </ul>
+
+                <div class="exp-tags">
+                  <span class="tag">React.js</span>
+                  <span class="tag">React Native</span>
+                  <span class="tag">FastAPI</span>
+                  <span class="tag">Node.js</span>
+                  <span class="tag">MongoDB</span>
+                  <span class="tag">REST APIs</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Agile</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════
+           PROJECTS
+      ═══════════════════════════════════ -->
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-eyebrow reveal-up">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-label">// featured_work[]</span>
+          </div>
+          <h2 class="section-title reveal-up delay-1">Things I've built</h2>
+          <p class="section-sub reveal-up delay-2">
+            Real products — not just to-do apps. Built to solve actual problems.
+          </p>
+
+          <div class="projects-grid">
+
+            <!-- ZippyCart -->
+            <article class="project-card reveal-up delay-1" id="project-zippycart" data-tilt>
+              <div class="project-card-glow"></div>
+              <div class="project-window-bar">
+                <span class="win-dot r"></span>
+                <span class="win-dot y"></span>
+                <span class="win-dot g"></span>
+                <span class="win-title">zippycart.js</span>
+                <div class="win-links">
+                  <a href="#" onclick="openTwoLinks(event)" class="win-btn" aria-label="Live demo">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a href="https://github.com/rahulkumar86920/Zippy_Cart" target="_blank" class="win-btn" aria-label="Source">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="project-img-wrap">
+                <img src="/img/zippyCart.png" alt="ZippyCart" loading="lazy" />
+                <div class="project-img-overlay">
+                  <a href="#" onclick="openTwoLinks(event)" class="overlay-btn">
+                    <i class="fas fa-play"></i> Live demo
+                  </a>
+                  <a href="https://github.com/rahulkumar86920/Zippy_Cart" target="_blank" class="overlay-btn overlay-btn--ghost">
+                    <i class="fab fa-github"></i> Source
+                  </a>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span class="tag">React</span><span class="tag">Node.js</span>
+                  <span class="tag">MongoDB</span><span class="tag">Express</span>
+                </div>
+                <h3 class="project-title">ZippyCart <span class="proj-num">01</span></h3>
+                <p class="project-desc">
+                  Real-time grocery delivery platform — JWT auth, live product catalog, cart management,
+                  payment integration, and order tracking. Deployed on cloud infra.
+                </p>
+                <a href="#" onclick="openTwoLinks(event)" class="proj-cta">
+                  Open project <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Zoomify -->
+            <article class="project-card reveal-up delay-2" id="project-zoomify" data-tilt>
+              <div class="project-card-glow"></div>
+              <div class="project-window-bar">
+                <span class="win-dot r"></span>
+                <span class="win-dot y"></span>
+                <span class="win-dot g"></span>
+                <span class="win-title">zoomify.js</span>
+                <div class="win-links">
+                  <a href="https://zoomify-frontend-3pov.onrender.com/" target="_blank" class="win-btn" aria-label="Live demo">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a href="https://github.com/rahulkumar86920/Zoomify" target="_blank" class="win-btn" aria-label="Source">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="project-img-wrap">
+                <img src="/img/zoomify.png" alt="Zoomify" loading="lazy" />
+                <div class="project-img-overlay">
+                  <a href="https://zoomify-frontend-3pov.onrender.com/" target="_blank" class="overlay-btn">
+                    <i class="fas fa-play"></i> Live demo
+                  </a>
+                  <a href="https://github.com/rahulkumar86920/Zoomify" target="_blank" class="overlay-btn overlay-btn--ghost">
+                    <i class="fab fa-github"></i> Source
+                  </a>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span class="tag">WebRTC</span><span class="tag">Socket.IO</span>
+                  <span class="tag">React</span><span class="tag">Node.js</span>
+                </div>
+                <h3 class="project-title">Zoomify <span class="proj-num">02</span></h3>
+                <p class="project-desc">
+                  Peer-to-peer video conferencing — HD video/audio, screen sharing, real-time chat,
+                  collaborative whiteboard, STUN/TURN for NAT traversal.
+                </p>
+                <a href="https://zoomify-frontend-3pov.onrender.com/" target="_blank" class="proj-cta">
+                  Open project <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- DataLens -->
+            <article class="project-card reveal-up delay-3" id="project-datalens" data-tilt>
+              <div class="project-card-glow"></div>
+              <div class="project-window-bar">
+                <span class="win-dot r"></span>
+                <span class="win-dot y"></span>
+                <span class="win-dot g"></span>
+                <span class="win-title">datalens.py</span>
+                <div class="win-links">
+                  <a href="https://data-lens-tau.vercel.app/" target="_blank" class="win-btn" aria-label="Live demo">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a href="https://github.com/rahulkumar86920/DataLens" target="_blank" class="win-btn" aria-label="Source">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="project-img-wrap">
+                <img src="/img/datalens.png" alt="DataLens" loading="lazy" />
+                <div class="project-img-overlay">
+                  <a href="https://data-lens-tau.vercel.app/" target="_blank" class="overlay-btn">
+                    <i class="fas fa-play"></i> Live demo
+                  </a>
+                  <a href="https://github.com/rahulkumar86920/DataLens" target="_blank" class="overlay-btn overlay-btn--ghost">
+                    <i class="fab fa-github"></i> Source
+                  </a>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span class="tag">Python</span><span class="tag">Selenium</span>
+                  <span class="tag">BeautifulSoup</span><span class="tag">MongoDB</span>
+                </div>
+                <h3 class="project-title">DataLens <span class="proj-num">03</span></h3>
+                <p class="project-desc">
+                  Automated data extraction engine — static + JS-rendered pages, dedup,
+                  validation, MongoDB storage, CSV/JSON export. 99.5% accuracy.
+                </p>
+                <a href="https://data-lens-tau.vercel.app/" target="_blank" class="proj-cta">
+                  Open project <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Sweet Shop -->
+            <article class="project-card reveal-up delay-1" id="project-sweetshop" data-tilt>
+              <div class="project-card-glow"></div>
+              <div class="project-window-bar">
+                <span class="win-dot r"></span>
+                <span class="win-dot y"></span>
+                <span class="win-dot g"></span>
+                <span class="win-title">sweetshop.js</span>
+                <div class="win-links">
+                  <a href="https://github.com/rahulkumar86920/sweet_shop_management" target="_blank" class="win-btn" aria-label="Source">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="project-img-wrap">
+                <img src="/img/sweetshop.png" alt="Sweet Shop" loading="lazy" />
+                <div class="project-img-overlay">
+                  <a href="https://github.com/rahulkumar86920/sweet_shop_management" target="_blank" class="overlay-btn overlay-btn--ghost">
+                    <i class="fab fa-github"></i> Source
+                  </a>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span class="tag">React</span><span class="tag">Express</span>
+                  <span class="tag">MongoDB</span><span class="tag">Node.js</span>
+                </div>
+                <h3 class="project-title">Sweet Shop <span class="proj-num">04</span></h3>
+                <p class="project-desc">
+                  Role-based inventory + billing system — real-time stock tracking,
+                  GST invoice generation, sales analytics. Cuts manual errors by 60%.
+                </p>
+                <a href="https://github.com/rahulkumar86920" target="_blank" class="proj-cta">
+                  Open project <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="projects-footer reveal-up">
+            <span class="pf-text">More on GitHub →</span>
+            <a href="https://github.com/rahulkumar86920?tab=repositories" target="_blank"
+               class="mag-btn btn-ghost" id="github-all-btn">
+              <span class="mag-btn-text"><i class="fab fa-github"></i> All repositories</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════
+           CONTACT
+      ═══════════════════════════════════ -->
+      <section class="section section-dark" id="contact">
+        <div class="container">
+          <div class="section-eyebrow reveal-up">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-label">// contact.init()</span>
+          </div>
+
+          <div class="contact-layout">
+            <div class="contact-left reveal-up">
+              <h2 class="contact-heading">
+                Got something<br />
+                in mind?<br />
+                <em>Let's talk.</em>
+              </h2>
+              <p class="contact-body">
+                Actively looking for full-time engineering roles.
+                Whether it's a job, a collab, or just a chat about tech — I'm around.
+              </p>
+
+              <div class="contact-links">
+                <a href="mailto:rahulkumar86920@gmail.com" class="clink" id="contact-email">
+                  <span class="clink-icon"><i class="fas fa-envelope"></i></span>
+                  <div class="clink-text">
+                    <span class="clink-label">Email</span>
+                    <span class="clink-val">rahulkumar86920@gmail.com</span>
+                  </div>
+                  <i class="fas fa-arrow-right clink-arrow"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rahhulkumar/" target="_blank" class="clink" id="contact-linkedin">
+                  <span class="clink-icon"><i class="fab fa-linkedin"></i></span>
+                  <div class="clink-text">
+                    <span class="clink-label">LinkedIn</span>
+                    <span class="clink-val">linkedin.com/in/rahhulkumar</span>
+                  </div>
+                  <i class="fas fa-arrow-right clink-arrow"></i>
+                </a>
+                <a href="https://github.com/rahulkumar86920" target="_blank" class="clink" id="contact-github">
+                  <span class="clink-icon"><i class="fab fa-github"></i></span>
+                  <div class="clink-text">
+                    <span class="clink-label">GitHub</span>
+                    <span class="clink-val">github.com/rahulkumar86920</span>
+                  </div>
+                  <i class="fas fa-arrow-right clink-arrow"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-right reveal-up delay-2">
+              <div class="contact-terminal">
+                <div class="term-bar">
+                  <span class="term-dot r"></span>
+                  <span class="term-dot y"></span>
+                  <span class="term-dot g"></span>
+                  <span class="term-title">message.sh</span>
+                </div>
+                <div class="term-content">
+                  <p class="t-line"><span class="t-p">$</span> <span class="t-cmd">whoami</span></p>
+                  <p class="t-out">rahul_kumar — open to work ✓</p>
+                  <p class="t-line"><span class="t-p">$</span> <span class="t-cmd">cat status.txt</span></p>
+                  <p class="t-out">Actively interviewing for SDE roles.</p>
+                  <p class="t-out">Response time: &lt; 24h</p>
+                  <p class="t-line t-line--mt"><span class="t-p">$</span> <span class="t-cmd">send --message</span></p>
+                  <div class="t-actions">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rahulkumar86920@gmail.com&su=Opportunity&body=Hi%20Rahul,"
+                       target="_blank" class="mag-btn btn-primary btn-sm" id="send-email-btn">
+                      <span class="mag-btn-text"><i class="fas fa-paper-plane"></i> Send message</span>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1LtXh19VvJwXxunKSMnKEOLt8MPR6zUTJ/view?usp=drive_link"
+                       target="_blank" class="mag-btn btn-ghost btn-sm" id="download-resume-btn">
+                      <span class="mag-btn-text"><i class="fas fa-file-lines"></i> Resume</span>
+                    </a>
+                  </div>
+                  <div class="t-socials">
+                    <a href="https://github.com/rahulkumar86920" target="_blank" class="t-social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/rahhulkumar/" target="_blank" class="t-social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/rahulkumar86920" target="_blank" class="t-social-link"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/mr_rahhul/" target="_blank" class="t-social-link"><i class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <p>&copy; 2026 Rahul Kumar. Designed & Built with passion.</p>
+      <div class="container footer-inner">
+        <span class="footer-copy">
+          <span class="c-kw">const</span> year = <span class="c-str">2026</span>;
+          &nbsp;// Rahul Kumar. No templates, no shortcuts.
+        </span>
+        <div class="footer-links">
+          <a href="https://github.com/rahulkumar86920" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/rahhulkumar/" target="_blank">LinkedIn</a>
+        </div>
       </div>
     </footer>
 
