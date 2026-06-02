@@ -1488,7 +1488,7 @@ button { font-family: inherit; cursor: none; border: none; background: none; }
 /* Photo — floats in the right half of the hero, never touches text */
 .hero-photo-col {
   position: absolute;
-  right: clamp(1rem, 6%, 5rem);
+  right: clamp(1.5rem, 15%, 11rem);
   top: 50%;
   transform: translateY(-50%);
   z-index: 3;
