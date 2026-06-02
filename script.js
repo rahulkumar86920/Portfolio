@@ -518,3 +518,49 @@ function openTwoLinks(e) {
 window.addEventListener('load', () => {
   document.body.classList.add('loaded');
 });
+
+// ═══════════════════════════════════════════════════════════════
+//  CONTACT FORM — Formspree async submission
+// ═══════════════════════════════════════════════════════════════
+(function ContactForm() {
+  const form   = $('#contactForm');
+  const status = $('#formStatus');
+  const btn    = $('#form-submit-btn');
+  const btnText = btn ? btn.querySelector('.form-submit-text') : null;
+  if (!form || !status) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Loading state
+    if (btn) btn.disabled = true;
+    if (btnText) btnText.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    status.className = 'form-status';
+
+    try {
+      const data = new FormData(form);
+      const res  = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' },
+      });
+
+      if (res.ok) {
+        status.textContent = '✓ Message sent! I\'ll get back to you within 24h.';
+        status.className   = 'form-status success';
+        form.reset();
+      } else {
+        const json = await res.json();
+        const err  = json.errors ? json.errors.map(e => e.message).join(', ') : 'Something went wrong.';
+        status.textContent = '✗ ' + err;
+        status.className   = 'form-status error';
+      }
+    } catch {
+      status.textContent = '✗ Network error. Try emailing directly.';
+      status.className   = 'form-status error';
+    } finally {
+      if (btn) btn.disabled = false;
+      if (btnText) btnText.innerHTML = '<i class="fas fa-paper-plane"></i> Send message';
+    }
+  });
+})();

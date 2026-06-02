@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 — Page Not Found · Rahul Kumar</title>
+    <link rel="icon" type="image/png" href="/profile_rahul.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+      :root {
+        --bg:    #020508;
+        --bg-1:  #080d16;
+        --bg-2:  #0c1220;
+        --cyan:  #00e5ff;
+        --green: #00ff88;
+        --t1: #e8f0ff;
+        --t2: #7a8499;
+        --t3: #3a4155;
+        --b1: rgba(255,255,255,0.08);
+        --mono: 'JetBrains Mono', monospace;
+        --disp: 'Syne', sans-serif;
+        --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      html, body {
+        height: 100%;
+        font-family: var(--mono);
+        background: var(--bg);
+        color: var(--t1);
+        -webkit-font-smoothing: antialiased;
+        overflow: hidden;
+      }
+
+      /* Noise */
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        opacity: 0.025;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        background-size: 200px;
+        pointer-events: none;
+      }
+
+      /* Grid */
+      body::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        background-image:
+          linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+        background-size: 60px 60px;
+        mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
+        pointer-events: none;
+      }
+
+      .wrap {
+        position: relative;
+        z-index: 1;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      .terminal {
+        width: min(560px, 100%);
+        background: var(--bg-2);
+        border: 1px solid var(--b1);
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 0 80px rgba(0,229,255,0.07), 0 0 0 1px rgba(0,229,255,0.04);
+        animation: slide-up 0.6s cubic-bezier(0.16,1,0.3,1) both;
+      }
+
+      @keyframes slide-up {
+        from { opacity: 0; transform: translateY(24px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      .term-bar {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+        background: rgba(255,255,255,0.02);
+        border-bottom: 1px solid rgba(255,255,255,0.04);
+      }
+
+      .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+      .dot-r { background: #ff5f57; }
+      .dot-y { background: #febc2e; }
+      .dot-g { background: #28c840; }
+
+      .term-title {
+        flex: 1;
+        text-align: center;
+        font-size: 0.72rem;
+        color: var(--t2);
+      }
+
+      .term-body {
+        padding: 1.75rem 2rem 2rem;
+      }
+
+      /* 404 number */
+      .err-code {
+        font-family: var(--disp);
+        font-size: clamp(4rem, 15vw, 7rem);
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        line-height: 1;
+        background: linear-gradient(135deg, var(--cyan), #8b5cf6, #f472b6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 0.5rem;
+        animation: glitch-num 5s infinite;
+      }
+
+      @keyframes glitch-num {
+        0%, 88%, 100% { filter: none; }
+        90% { filter: blur(1px); transform: skewX(2deg); }
+        92% { filter: none; transform: skewX(0); }
+        94% { filter: blur(0.5px); transform: skewX(-1deg); }
+        96% { filter: none; transform: none; }
+      }
+
+      /* Terminal output lines */
+      .t-out { font-size: 0.82rem; color: var(--t2); line-height: 2; }
+      .t-line { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; line-height: 2; }
+      .t-p    { color: var(--green); }
+      .t-cmd  { color: var(--cyan); }
+      .t-err  { color: #f87171; }
+      .t-warn { color: #fbbf24; }
+      .t-ok   { color: var(--green); }
+
+      .blink { animation: blink 1s step-end infinite; }
+      @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+      .divider {
+        height: 1px;
+        background: rgba(255,255,255,0.04);
+        margin: 1.25rem 0;
+      }
+
+      /* Go home button */
+      .home-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--cyan);
+        color: #000;
+        font-family: var(--mono);
+        font-weight: 700;
+        font-size: 0.82rem;
+        padding: 0.6rem 1.25rem;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s var(--ease);
+        margin-top: 0.5rem;
+      }
+      .home-btn:hover {
+        background: #fff;
+        box-shadow: 0 0 30px rgba(0,229,255,0.3);
+        transform: translateY(-2px);
+      }
+
+      .footer-note {
+        margin-top: 1.5rem;
+        font-size: 0.7rem;
+        color: var(--t3);
+        text-align: center;
+      }
+
+      /* Scan lines */
+      .scanlines {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background: repeating-linear-gradient(
+          0deg, transparent, transparent 2px,
+          rgba(0,0,0,0.025) 2px, rgba(0,0,0,0.025) 4px
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scanlines"></div>
+
+    <div class="wrap">
+      <div class="terminal">
+        <div class="term-bar">
+          <span class="dot dot-r"></span>
+          <span class="dot dot-y"></span>
+          <span class="dot dot-g"></span>
+          <span class="term-title">bash — rahulkumar86920.github.io</span>
+        </div>
+
+        <div class="term-body">
+          <div class="err-code">404</div>
+
+          <div class="t-line"><span class="t-p">$</span><span class="t-cmd">GET /this-page</span></div>
+          <p class="t-out t-err">✗ Error: File not found on this server</p>
+          <p class="t-out t-warn">⚠  The page you're looking for doesn't exist or was moved.</p>
+
+          <div class="divider"></div>
+
+          <div class="t-line"><span class="t-p">$</span><span class="t-cmd">ls /portfolio</span></div>
+          <p class="t-out t-ok">✓ /home &nbsp;&nbsp;&nbsp;&nbsp; ─ Hero &amp; intro</p>
+          <p class="t-out t-ok">✓ /about-me &nbsp; ─ About me</p>
+          <p class="t-out t-ok">✓ /about &nbsp;&nbsp;&nbsp;&nbsp; ─ Tech stack</p>
+          <p class="t-out t-ok">✓ /experience ─ Work history</p>
+          <p class="t-out t-ok">✓ /projects &nbsp; ─ Featured work</p>
+          <p class="t-out t-ok">✓ /contact &nbsp;&nbsp; ─ Get in touch</p>
+
+          <div class="divider"></div>
+
+          <div class="t-line">
+            <span class="t-p">$</span>
+            <span class="t-cmd">cd /home</span>
+            <span class="blink" style="color:var(--cyan);margin-left:2px">█</span>
+          </div>
+
+          <a href="/index.html" class="home-btn">
+            <i class="fas fa-terminal"></i> Back to portfolio
+          </a>
+
+          <p class="footer-note">© 2026 Rahul Kumar · rahulkumar86920@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

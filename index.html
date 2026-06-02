@@ -5,7 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Rahul Kumar — B.Sc. IT Graduate & Software Developer. MERN Stack, React Native, FastAPI. 5 months SDE Intern @ Restaverse. Open to opportunities." />
     <title>Rahul Kumar · Software Developer</title>
-    <link rel="icon" type="image/png" href="/profile_rahul.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/profile_rahul.png" />
+    <link rel="apple-touch-icon" href="/profile_rahul.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content="https://rahulkumar86920.github.io/Portfolio/" />
+    <meta property="og:title"       content="Rahul Kumar · Software Developer" />
+    <meta property="og:description" content="B.Sc. IT Graduate & Software Developer. MERN Stack, React Native, FastAPI. SDE Intern @ Restaverse. Open to opportunities." />
+    <meta property="og:image"       content="https://rahulkumar86920.github.io/Portfolio/profile_rahul.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:site"        content="@rahulkumar86920" />
+    <meta name="twitter:title"       content="Rahul Kumar · Software Developer" />
+    <meta name="twitter:description" content="MERN Stack, React Native, FastAPI developer. Open to full-time SDE roles." />
+    <meta name="twitter:image"       content="https://rahulkumar86920.github.io/Portfolio/profile_rahul.png" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://rahulkumar86920.github.io/Portfolio/" />
+
+    <!-- Extra SEO -->
+    <meta name="author"   content="Rahul Kumar" />
+    <meta name="keywords" content="Rahul Kumar, Software Developer, MERN Stack, React Native, FastAPI, Full Stack Developer, Node.js, MongoDB, Mumbai, SDE" />
+    <meta name="robots"   content="index, follow" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -58,10 +84,11 @@
         </a>
 
         <ul class="nav-links" id="navLinks">
-          <li><a href="#about"      class="nav-link" data-section="about">      <span class="nav-num">01.</span> Stack</a></li>
-          <li><a href="#experience" class="nav-link" data-section="experience"> <span class="nav-num">02.</span> Work</a></li>
-          <li><a href="#projects"   class="nav-link" data-section="projects">   <span class="nav-num">03.</span> Projects</a></li>
-          <li><a href="#contact"    class="nav-link" data-section="contact">    <span class="nav-num">04.</span> Contact</a></li>
+          <li><a href="#about-me"   class="nav-link" data-section="about-me">   <span class="nav-num">01.</span> About</a></li>
+          <li><a href="#about"      class="nav-link" data-section="about">      <span class="nav-num">02.</span> Stack</a></li>
+          <li><a href="#experience" class="nav-link" data-section="experience"> <span class="nav-num">03.</span> Work</a></li>
+          <li><a href="#projects"   class="nav-link" data-section="projects">   <span class="nav-num">04.</span> Projects</a></li>
+          <li><a href="#contact"    class="nav-link" data-section="contact">    <span class="nav-num">05.</span> Contact</a></li>
         </ul>
 
         <a href="https://drive.google.com/file/d/1LtXh19VvJwXxunKSMnKEOLt8MPR6zUTJ/view?usp=drive_link"
@@ -105,51 +132,63 @@
         </div>
 
         <div class="hero-inner container">
-          <div class="hero-status reveal-up">
-            <span class="status-dot"></span>
-            <span class="status-text">Available for full-time roles</span>
-            <span class="status-sep">//</span>
-            <span class="status-loc"><i class="fas fa-location-dot"></i> Mumbai, IN</span>
-          </div>
+          <div class="hero-split">
+            <!-- Left: Text -->
+            <div class="hero-text-col">
+              <div class="hero-status reveal-up">
+                <span class="status-dot"></span>
+                <span class="status-text">Available for full-time roles</span>
+                <span class="status-sep">//</span>
+                <span class="status-loc"><i class="fas fa-location-dot"></i> Mumbai, IN</span>
+              </div>
 
-          <h1 class="hero-name reveal-up delay-1">
-            <span class="glitch" data-text="Rahul">Rahul</span>
-            <br />
-            <em class="glitch-em" data-text="Kumar">Kumar</em>
-          </h1>
+              <h1 class="hero-name reveal-up delay-1">
+                <span class="glitch" data-text="Rahul">Rahul</span>
+                <br />
+                <em class="glitch-em" data-text="Kumar">Kumar</em>
+              </h1>
 
-          <div class="hero-role reveal-up delay-2">
-            <span class="role-prefix">$&nbsp;</span>
-            <span class="typed-text" id="typedText"></span>
-            <span class="cursor-blink">█</span>
-          </div>
+              <div class="hero-role reveal-up delay-2">
+                <span class="role-prefix">$&nbsp;</span>
+                <span class="typed-text" id="typedText"></span>
+                <span class="cursor-blink">█</span>
+              </div>
 
-          <p class="hero-bio reveal-up delay-3">
-            B.Sc. IT graduated from D.G. Ruparel College, Mumbai. 5 months as SDE Intern at Restaverse
-            working on React.js, React Native &amp; FastAPI. I pick up whatever the problem needs and ship it.
-          </p>
+              <p class="hero-bio reveal-up delay-3">
+                B.Sc. IT graduate from D.G. Ruparel College, Mumbai. 5 months as SDE Intern at Restaverse
+                working on React.js, React Native &amp; FastAPI. I pick up whatever the problem needs and ship it.
+              </p>
 
-          <div class="hero-actions reveal-up delay-4">
-            <a href="#projects" class="mag-btn btn-primary" id="hero-projects-btn">
-              <span class="mag-btn-text">View projects<i class="fas fa-terminal"></i></span>
-            </a>
-            <a href="#contact" class="mag-btn btn-ghost" id="hero-contact-btn">
-              <span class="mag-btn-text">Say hello <i class="fas fa-arrow-right"></i></span>
-            </a>
-          </div>
+              <div class="hero-actions reveal-up delay-4">
+                <a href="#projects" class="mag-btn btn-primary" id="hero-projects-btn">
+                  <span class="mag-btn-text">View projects<i class="fas fa-terminal"></i></span>
+                </a>
+                <a href="#contact" class="mag-btn btn-ghost" id="hero-contact-btn">
+                  <span class="mag-btn-text">Say hello <i class="fas fa-arrow-right"></i></span>
+                </a>
+              </div>
 
-          <div class="hero-socials reveal-up delay-5">
-            <a href="https://github.com/rahulkumar86920" target="_blank" class="s-link" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/rahhulkumar/" target="_blank" class="s-link" aria-label="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://twitter.com/rahulkumar86920" target="_blank" class="s-link" aria-label="Twitter">
-              <i class="fab fa-x-twitter"></i>
-            </a>
-            <div class="s-divider"></div>
-            <span class="s-hint">find me online</span>
+              <div class="hero-socials reveal-up delay-5">
+                <a href="https://github.com/rahulkumar86920" target="_blank" class="s-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rahhulkumar/" target="_blank" class="s-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/rahulkumar86920" target="_blank" class="s-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <div class="s-divider"></div>
+                <span class="s-hint">find me online</span>
+              </div>
+            </div>
+
+            <!-- Right: Photo -->
+            <div class="hero-photo-col reveal-up delay-3">
+              <div class="hero-photo-wrap">
+                <div class="hero-photo-ring"></div>
+                <div class="hero-photo-ring hero-photo-ring--2"></div>
+                <img src="/profile_rahul.png" alt="Rahul Kumar" class="hero-photo" width="320" height="320" />
+                <div class="hero-photo-badge">
+                  <span class="badge-dot"></span>
+                  <span>Open to work</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -161,7 +200,60 @@
       </section>
 
       <!-- ═══════════════════════════════════
-           STACK / ABOUT
+           ABOUT ME
+      ═══════════════════════════════════ -->
+      <section class="section section-dark" id="about-me">
+        <div class="container">
+          <div class="section-eyebrow reveal-up">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-label">// about_me.json</span>
+          </div>
+          <h2 class="section-title reveal-up delay-1">A bit about me</h2>
+
+          <div class="about-grid">
+            <div class="about-card reveal-up delay-1">
+              <div class="about-card-icon"><i class="fas fa-graduation-cap"></i></div>
+              <h3>Education</h3>
+              <p>B.Sc. Information Technology</p>
+              <span class="about-card-sub">D.G. Ruparel College, Mumbai · 2023–2026</span>
+            </div>
+            <div class="about-card reveal-up delay-2">
+              <div class="about-card-icon"><i class="fas fa-briefcase"></i></div>
+              <h3>Experience</h3>
+              <p>SDE Intern @ Restaverse</p>
+              <span class="about-card-sub">Jan 2026 – May 2026 · 5 months</span>
+            </div>
+            <div class="about-card reveal-up delay-3">
+              <div class="about-card-icon"><i class="fas fa-code"></i></div>
+              <h3>Focus</h3>
+              <p>Full Stack &amp; Mobile Dev</p>
+              <span class="about-card-sub">MERN · React Native · FastAPI</span>
+            </div>
+            <div class="about-card reveal-up delay-1">
+              <div class="about-card-icon"><i class="fas fa-location-dot"></i></div>
+              <h3>Location</h3>
+              <p>Mumbai, Maharashtra</p>
+              <span class="about-card-sub">India · Open to remote &amp; relocation</span>
+            </div>
+          </div>
+
+          <div class="about-bio reveal-up">
+            <p>
+              I'm a developer who gets things done. Whether it's building a real-time video app with WebRTC,
+              scraping thousands of data points with Python, or shipping mobile features with React Native —
+              I don't overthink it, I just build it. I care about clean code, fast products, and working
+              with people who are passionate about what they do.
+            </p>
+            <p>
+              Currently looking for a full-time SDE role where I can contribute from day one.
+              Strong in Java DSA, comfortable across the MERN stack, and always picking up new tech as needed.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════
+           STACK / SKILLS
       ═══════════════════════════════════ -->
       <section class="section" id="about">
         <div class="container">
@@ -297,6 +389,11 @@
             <div class="stat-item">
               <span class="stat-num" data-count="40">0</span>
               <span class="stat-label">% faster APIs (optimized)</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+              <span class="stat-num" data-count="300">0</span>
+              <span class="stat-label">+ DSA problems solved</span>
             </div>
           </div>
         </div>
@@ -612,6 +709,7 @@
             </div>
 
             <div class="contact-right reveal-up delay-2">
+              <!-- Formspree Contact Form -->
               <div class="contact-terminal">
                 <div class="term-bar">
                   <span class="term-dot r"></span>
@@ -620,22 +718,38 @@
                   <span class="term-title">message.sh</span>
                 </div>
                 <div class="term-content">
-                  <p class="t-line"><span class="t-p">$</span> <span class="t-cmd">whoami</span></p>
-                  <p class="t-out">rahul_kumar — open to work ✓</p>
-                  <p class="t-line"><span class="t-p">$</span> <span class="t-cmd">cat status.txt</span></p>
-                  <p class="t-out">Actively interviewing for SDE roles.</p>
-                  <p class="t-out">Response time: &lt; 24h</p>
-                  <p class="t-line t-line--mt"><span class="t-p">$</span> <span class="t-cmd">send --message</span></p>
-                  <div class="t-actions">
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rahulkumar86920@gmail.com&su=Opportunity&body=Hi%20Rahul,"
-                       target="_blank" class="mag-btn btn-primary btn-sm" id="send-email-btn">
-                      <span class="mag-btn-text"><i class="fas fa-paper-plane"></i> Send message</span>
-                    </a>
-                    <a href="https://drive.google.com/file/d/1LtXh19VvJwXxunKSMnKEOLt8MPR6zUTJ/view?usp=drive_link"
-                       target="_blank" class="mag-btn btn-ghost btn-sm" id="download-resume-btn">
-                      <span class="mag-btn-text"><i class="fas fa-file-lines"></i> Resume</span>
-                    </a>
-                  </div>
+                  <p class="t-line"><span class="t-p">$</span> <span class="t-cmd">send --message</span></p>
+
+                  <form class="contact-form" id="contactForm"
+                        action="https://formspree.io/f/meedyzdq"
+                        method="POST">
+                    <div class="form-group">
+                      <label for="form-name" class="form-label">Name</label>
+                      <input type="text" id="form-name" name="name"
+                             class="form-input" placeholder="Recruiter / Friend / Anyone"
+                             required autocomplete="name" />
+                    </div>
+                    <div class="form-group">
+                      <label for="form-email" class="form-label">Email</label>
+                      <input type="email" id="form-email" name="email"
+                             class="form-input" placeholder="you@company.com"
+                             required autocomplete="email" />
+                    </div>
+                    <div class="form-group">
+                      <label for="form-msg" class="form-label">Message</label>
+                      <textarea id="form-msg" name="message"
+                                class="form-input form-textarea"
+                                placeholder="Hey Rahul, we'd love to talk..."
+                                rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="form-submit mag-btn" id="form-submit-btn">
+                      <span class="mag-btn-text form-submit-text">
+                        <i class="fas fa-paper-plane"></i> Send message
+                      </span>
+                    </button>
+                    <div class="form-status" id="formStatus"></div>
+                  </form>
+
                   <div class="t-socials">
                     <a href="https://github.com/rahulkumar86920" target="_blank" class="t-social-link"><i class="fab fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/rahhulkumar/" target="_blank" class="t-social-link"><i class="fab fa-linkedin"></i></a>
